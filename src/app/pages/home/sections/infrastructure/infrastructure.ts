@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface SecurityFeature {
-  icon: string;
-  title: string;
-  description: string;
-  color: string;
-}
+import type { SecurityFeature } from '../../../../core/interfaces/infrastructure/security-feature.interface';
 
 @Component({
   selector: 'app-infrastructure',

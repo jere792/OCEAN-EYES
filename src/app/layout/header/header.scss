@@ -7,11 +7,12 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
+
+  background: #00000000;
   transition: all 0.3s ease;
 
   &--scrolled {
-    background: linear-gradient(to bottom, #0d1b2a 0%, #0a2132 50%, #08283a 100%);
+    background: linear-gradient(to bottom, #0D1B2A 0%, #0A2132 50%, #08283A 100%);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   }
@@ -76,23 +77,21 @@
       transition: transform 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
       box-shadow: none;
 
-      // Cerrado: invisible
-      background: transparent;
+      background: #00000000;
       backdrop-filter: blur(0px);
 
       &--open {
         transform: translateX(0);
         background: linear-gradient(
           135deg,
-          rgba(8, 40, 58, 0.78),
-          rgba(19, 182, 236, 0.22)
+          #08283AC7, // antes: rgba(8, 40, 58, 0.78) [web:639]
+          #13B6EC38  // antes: rgba(19, 182, 236, 0.22) [web:639]
         );
         backdrop-filter: blur(12px);
       }
 
-      // Abierto y con scroll: sólido
       &--open.header__nav--scrolled {
-        background: rgba(8, 40, 58, 0.98);
+        background: #08283AFA;
         backdrop-filter: blur(10px);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
       }
@@ -124,7 +123,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: #FFFFFF1A;
       color: v.$accent-cyan;
     }
 
@@ -174,12 +173,12 @@
 
 @media (max-width: v.$breakpoint-mobile) {
   .header {
-    background: #0d1b2a;
+    background: #0D1B2A;
     backdrop-filter: none;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
 
     &--scrolled {
-      background: #0d1b2a;
+      background: #0D1B2A;
       backdrop-filter: none;
       box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
     }

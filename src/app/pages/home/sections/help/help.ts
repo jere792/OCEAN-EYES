@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface HelpAction {
-  id: number;
-  image: string;
-  icon: string;
-  title: string;
-  description: string;
-}
+import type { HelpAction } from '../../../../core/interfaces/help/help-action.interface';
 
 @Component({
   selector: 'app-help',
@@ -39,7 +32,6 @@ export class Help {
       title: 'Reduce tu Huella Marina',
       description: 'Evita plásticos de un solo uso y especies en riesgo para proteger los océanos.',
     },
-
     {
       id: 4,
       image: 'assets/images/help/barco-4.jpg',

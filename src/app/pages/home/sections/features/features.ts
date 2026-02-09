@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface Feature {
-  id: number;
-  icon: string;
-  title: string;
-  description: string;
-}
+import type { Feature } from '../../../../core/interfaces/feature/feature.interface';
 
 @Component({
   selector: 'app-features',

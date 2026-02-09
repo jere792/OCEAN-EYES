@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface SocialLink {
-  name: string;
-  url: string;
-  iconClass: string;
-}
+import type { SocialLink } from '../../../../core/interfaces/contact/social-link.interface';
 
 @Component({
   selector: 'app-contact',
@@ -19,6 +14,6 @@ export class Contact {
     { name: 'Facebook', url: 'https://facebook.com', iconClass: 'fa-brands fa-facebook-f' },
     { name: 'Instagram', url: 'https://instagram.com', iconClass: 'fa-brands fa-instagram' },
     { name: 'TikTok', url: 'https://tiktok.com', iconClass: 'fa-brands fa-tiktok' },
-    { name: 'X', url: 'https://x.com', iconClass: 'fa-brands fa-x-twitter' }
+    { name: 'X', url: 'https://x.com', iconClass: 'fa-brands fa-x-twitter' },
   ];
 }
