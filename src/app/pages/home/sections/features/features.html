@@ -1,0 +1,76 @@
+<section class="features" id="funcionalidades">
+  <div class="features__container">
+    <div class="features__header">
+      <h2 class="features__title">Funcionalidades Principales</h2>
+      <p class="features__subtitle">
+        Una app diseñada para pescadores, fácil de usar y poderosa para proteger el océano.
+      </p>
+    </div>
+
+    <div class="features__content">
+      <div class="features__column features__column--left">
+        <div class="features__card">
+          <div class="features__card-icon">
+            <img [src]="features[0].icon" [alt]="features[0].title">
+          </div>
+          <div class="features__card-content">
+            <h3 class="features__card-title">{{ features[0].title }}</h3>
+            <p class="features__card-description">{{ features[0].description }}</p>
+          </div>
+        </div>
+        
+        <div class="features__card">
+          <div class="features__card-icon">
+            <img [src]="features[2].icon" [alt]="features[2].title">
+          </div>
+          <div class="features__card-content">
+            <h3 class="features__card-title">{{ features[2].title }}</h3>
+            <p class="features__card-description">{{ features[2].description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features__column features__column--center">
+        <div class="features__mockup">
+          <div class="features__phone">
+            <div class="features__phone-screen">
+              <div class="features__phone-header">Ocean Eyes</div>
+              <div class="features__phone-content">
+                <div class="features__phone-button features__phone-button--primary">
+                  <img src="assets/icons/alerta-icon.png" alt="Fish icon">
+                  <span>REPORTAR <br> PESCA ILEGAL</span>
+                </div>
+                <div class="features__phone-button features__phone-button--secondary">
+                  <img src="assets/icons/agua-icon.png" alt="Water icon">
+                  <span>MEJOR CALIDAD <br> DEL AGUA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features__column features__column--right">
+        <div class="features__card">
+          <div class="features__card-icon">
+            <img [src]="features[1].icon" [alt]="features[1].title">
+          </div>
+          <div class="features__card-content">
+            <h3 class="features__card-title">{{ features[1].title }}</h3>
+            <p class="features__card-description">{{ features[1].description }}</p>
+          </div>
+        </div>
+        
+        <div class="features__card">
+          <div class="features__card-icon">
+            <img [src]="features[3].icon" [alt]="features[3].title">
+          </div>
+          <div class="features__card-content">
+            <h3 class="features__card-title">{{ features[3].title }}</h3>
+            <p class="features__card-description">{{ features[3].description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

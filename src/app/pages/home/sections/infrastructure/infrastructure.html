@@ -1,0 +1,28 @@
+<section class="infrastructure section" id="infraestructura">
+  <div class="infrastructure__container">
+    <div class="infrastructure__card">
+      <div class="infrastructure__left">
+        <img src="assets/images/infrastructure/seguridad-celular.jpg" alt="Seguridad móvil" class="infrastructure__image">
+      </div>
+
+      <div class="infrastructure__right">
+        <div class="infrastructure__header">
+          <i class="fas fa-shield-alt infrastructure__header-icon"></i>
+          <h2 class="infrastructure__title">Infraestructura Tecnológica Segura</h2>
+        </div>
+
+        <div class="infrastructure__features">
+          @for (feature of features; track feature.title) {
+            <div class="infrastructure__feature">
+              <i [class]="feature.icon" class="infrastructure__feature-icon" [style.color]="feature.color"></i>
+              <div class="infrastructure__feature-text">
+                <h3 class="infrastructure__feature-title">{{ feature.title }}</h3>
+                <p class="infrastructure__feature-description">{{ feature.description }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

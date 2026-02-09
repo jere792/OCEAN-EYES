@@ -1,0 +1,46 @@
+@use './variables' as v;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 v.$spacing-md;
+  
+  @media (max-width: v.$breakpoint-mobile) {
+    padding: 0 v.$spacing-sm;
+  }
+}
+
+@mixin card {
+  background: white;
+  border-radius: v.$border-radius-md;
+  box-shadow: v.$shadow-md;
+  padding: v.$spacing-md;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: v.$shadow-lg;
+  }
+}
+
+@mixin button-primary {
+  background: v.$accent-cyan;
+  color: white;
+  padding: 12px 32px;
+  border: none;
+  border-radius: v.$border-radius-sm;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: darken(v.$accent-cyan, 10%);
+    transform: scale(1.05);
+  }
+}

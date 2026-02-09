@@ -1,0 +1,14 @@
+<section class="impact section" id="impacto">
+  <div class="container">
+    <h2 class="impact__title">Nuestro Impacto Esperado</h2>
+    
+    <div class="impact__grid">
+      @for (stat of stats; track stat.label; let i = $index) {
+        <div class="impact__stat" [class]="'animate-delay-' + (i + 1)">
+          <div class="impact__stat-number">{{ stat.number }}</div>
+          <div class="impact__stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

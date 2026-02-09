@@ -1,0 +1,31 @@
+<section class="help" id="ayuda">
+  <div class="help__container">
+    <div class="help__header">
+      <h2 class="help__title">¿Cómo Puedes Ayudar?</h2>
+      <p class="help__subtitle">
+        Cada acción cuenta. Aquí te mostramos cómo puedes hacer la <br> diferencia.
+      </p>
+    </div>
+
+    <div class="help__grid">
+      @for (action of helpActions; track action.id) {
+        <div class="help__item">
+          <div class="help__image">
+            <img [src]="action.image" [alt]="action.title">
+            <div class="help__image-overlay"></div>
+          </div>
+          
+          <div class="help__card">
+            <div class="help__card-header">
+              <div class="help__card-icon">
+                <i [class]="action.icon"></i>
+              </div>
+              <h3 class="help__card-title">{{ action.title }}</h3>
+            </div>
+            <p class="help__card-description">{{ action.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<section class="contact section" id="contacto">
+  <div class="contact__container">
+
+    <img class="contact__logo" src="assets/images/logo-ocean-eyes-grande.png" alt="Ocean Eyes">
+
+    <h2 class="contact__name">Ocean Eyes</h2>
+
+    <p class="contact__text">
+      Estamos comprometidos con la protección de nuestros océanos y la preservación de la vida marina del Perú. Tu voz importa: cada reporte, cada consulta y cada idea nos ayuda a construir un futuro más sostenible para nuestras costas.
+    </p>
+    
+
+    <p class="contact__text">
+      ¿Tienes alguna pregunta?<br>
+      ¿Quieres reportar algo urgente?<br>
+      ¿Deseas colaborar con nosotros?
+    </p>
+
+    <p class="contact__text contact__cta">
+      Contáctanos, estamos aquí para escucharte.
+    </p>
+
+    <div class="contact__social" aria-label="Redes sociales">
+      @for (s of socialLinks; track s.name) {
+        <a class="contact__social-link" [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="s.name">
+          <i [class]="s.iconClass" aria-hidden="true"></i>
+        </a>
+      }
+    </div>
+  </div>
+</section>

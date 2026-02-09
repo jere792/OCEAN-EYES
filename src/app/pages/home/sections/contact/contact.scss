@@ -1,0 +1,87 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+.contact {
+  background: #1D6D84;
+  padding: v.$spacing-xl 0;
+  color: #ffffff;
+
+  &__container {
+    @include m.container;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: v.$spacing-md;
+    padding: 0 v.$spacing-md;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  &__name {
+    margin: 0;
+    font-family: 'Kadwa', serif;
+    font-size: clamp(1.75rem, 3.8vw, 3rem);
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: 'Instrument Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    line-height: 1.7;
+    max-width: 760px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  &__cta {
+    color: #ffffff;
+  }
+
+  &__social {
+    margin-top: v.$spacing-sm;
+    display: flex;
+    justify-content: center;
+    gap: v.$spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__social-link {
+    width: 46px;
+    height: 46px;
+    @include m.flex-center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+
+    i {
+      font-size: 1.25rem;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+  }
+
+  @media (max-width: v.$breakpoint-mobile) {
+    padding: v.$spacing-lg 0;
+
+    &__logo {
+      width: 76px;
+      height: 76px;
+    }
+  }
+}

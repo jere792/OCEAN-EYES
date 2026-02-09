@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+.footer {
+  background: #092E42;
+  color: #ffffff;
+  padding: v.$spacing-lg 0;
+
+  &__container {
+    @include m.container;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__rights {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+
+  &__tagline {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+}
