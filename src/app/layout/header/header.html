@@ -1,14 +1,15 @@
 <header class="header" [class.header--scrolled]="isScrolled">
   <div class="header__container">
-
     <a href="#hero" class="header__logo" (click)="scrollToSection('hero', $event)">
-
-      <img src="assets/images/OCEAN-EYES-LOGO.png" alt="Ocean Eyes Logo" />
-      
+      <img src="assets/images/LOGO.png" alt="Ocean Eyes Logo" />
       <span>Ocean Eyes</span>
     </a>
 
-    <nav class="header__nav" [class.header__nav--open]="isMobileMenuOpen">
+    <nav
+      class="header__nav"
+      [class.header__nav--open]="isMobileMenuOpen"
+      [class.header__nav--scrolled]="isScrolled"
+    >
       <ul class="header__menu">
         @for (item of menuItems; track item.id) {
           <li class="header__menu-item">
@@ -29,6 +30,7 @@
       (click)="toggleMobileMenu()"
       [class.header__mobile-toggle--open]="isMobileMenuOpen"
       [attr.aria-label]="isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'"
+      type="button"
     >
       <span class="header__mobile-toggle-line"></span>
       <span class="header__mobile-toggle-line"></span>

@@ -4,7 +4,7 @@ import { Component, HostListener } from '@angular/core';
   selector: 'app-header',
   imports: [],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrl: './header.scss',
 })
 export class Header {
   isScrolled = false;
@@ -13,10 +13,10 @@ export class Header {
   menuItems = [
     { label: 'Inicio', link: '#hero', id: 'hero' },
     { label: 'Funcionalidades', link: '#funcionalidades', id: 'funcionalidades' },
-    { label: 'Impacto', link: '#impacto', id: 'impacto' },
-    { label: 'Tecnología', link: '#tecnologia', id: 'tecnologia' },
     { label: 'Ayuda', link: '#ayuda', id: 'ayuda' },
-    { label: 'Contacto', link: '#contacto', id: 'contacto' }
+    { label: 'Tecnología', link: '#tecnologia', id: 'tecnologia' },
+    { label: 'Impacto', link: '#impacto', id: 'impacto' },
+    { label: 'Contacto', link: '#contacto', id: 'contacto' },
   ];
 
   @HostListener('window:scroll', [])
@@ -34,7 +34,7 @@ export class Header {
 
   scrollToSection(sectionId: string, event: Event) {
     event.preventDefault();
-    
+
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
@@ -43,10 +43,10 @@ export class Header {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
-    
+
     this.closeMobileMenu();
   }
 }

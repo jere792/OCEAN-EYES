@@ -26,10 +26,21 @@
   &__subtitle {
     font-family: 'Inter', serif;
     font-size: clamp(0.95rem, 1.5vw, 1.125rem);
-    width: 600px;
-    font-weight: 600;
+    max-width: 600px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 v.$spacing-md;
+    font-weight: 600;
     letter-spacing: 0.1em;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  @media (max-width: v.$breakpoint-mobile) {
+    &__subtitle {
+      padding: 0 v.$spacing-sm;
+      letter-spacing: 0.06em;
+    }
   }
 
   &__content {
